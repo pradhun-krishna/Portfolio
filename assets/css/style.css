@@ -14,6 +14,8 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+
+
 :root {
 
   /**
@@ -24,7 +26,7 @@
   --white_a8: hsla(0, 0%, 100%, 0.08);
   --white_a12: hsla(0, 0%, 100%, 0.12);
   --cultured: hsla(220, 20%, 97%, 1);
-  --snow: hsla(345, 57%, 97%, 1);
+  --snow: #fff; /* If not already defined */
   --manatee: hsla(219, 10%, 62%, 1);
   --black-coral: hsla(220, 12%, 43%, 1);
   --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
@@ -378,14 +380,17 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-banner .w-100 {
-  mask-image: url("../images/Blob.svg");
+ /* mask-image: url("../images/Blob.svg");
   -webkit-mask-image: url("../images/Blog.svg");
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
   mask-size: auto;
-  -webkit-mask-size: auto;
+  -webkit-mask-size: auto;*/
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .hero .shape {
@@ -503,6 +508,81 @@ body.nav-active { overflow: hidden; }
 
 .project-card .btn-text:is(:hover, :focus-visible) { gap: 10px; }
 
+
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
+
+
+
+/* Font Styling */
+#blog {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-block: var(--section-padding);
+  color: #1f2937;
+  border-radius: var(--radius-8);
+  box-shadow: var(--shadow-2);
+}
+
+.blog-card {
+  background-color: var(--snow);
+  padding: 32px;
+  border-radius: var(--radius-8);
+  display: grid;
+  gap: 40px;
+}
+
+#blog h1{
+  font-size: 30px;
+}
+#blog h2{
+  font-size: 25px;
+}
+#blog h3{
+  font-size: 20px;
+}
+#blog h1, 
+#blog h2, 
+#blog h3 {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+#blog p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+#blog ul, 
+#blog ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#blog li {
+  margin-bottom: 0.75rem;
+}
+
+#blog a {
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+#blog a:hover {
+  color: #1d4ed8;
+}
+#blog .container {
+  max-width: 1200px; /* Match other sections */
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+
+
+/* Responsive container */
 
 
 
